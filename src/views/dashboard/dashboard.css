@@ -1,0 +1,151 @@
+.container {
+  max-width: 100% !important;
+}
+
+.header-social-sharing {
+  background-color: #00bcd5;
+  padding: 10px;
+  display: flex;
+  align-items: flex-start;
+  height: 130px;
+}
+
+.icon-social-sharing {
+  color: white;
+  font-size: 24px;
+}
+
+.buttons-social-sharing {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.button-social-sharing {
+  background-color: #0091a3 !important;
+  margin-left: 10px;
+}
+
+.button-donwload-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button-donwload {
+  background-color: #0091a3 !important;
+}
+
+.description {
+  background-color: #00a5bb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.description-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar {
+  border-radius: 100%;
+  width: 150px;
+  border: 4px solid white;
+  margin-top: -90px;
+}
+
+.name-title {
+  color: white;
+}
+
+.personal-data {
+  background-color: #008fa0;
+  padding: 10px;
+}
+
+.personal-data-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.personal-data-item {
+  display: flex;
+  margin-right: 15px;
+}
+
+.name-data {
+  color: white;
+  margin-left: 10px;
+}
+
+.sections {
+  background-color: #007888;
+  padding: 10px;
+}
+
+.nav-tabs {
+  border-bottom: 0px !important;
+}
+
+.nav-link {
+  color: white !important;
+  font-size: 17px;
+}
+
+.nav-link:hover {
+  color: #ebedf0 !important;
+  border: 0px !important;
+}
+
+.nav-link.active {
+  color: #007888 !important;
+}
+
+.sections-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeLine-container {
+  background-color: #d1cbcb;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-skill {
+  font-size: 25px;
+}
+
+.fix-width {
+  max-width: 100%;
+}
+
+.fix-row-width {
+  width: 100%;
+}
+
+.col-custom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.form-custom {
+  width: 60%;
+  background-color: white;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.title-section-skill {
+  text-align: center;
+  padding: 15px;
+  text-decoration: underline;
+  font-size: 25px;
+}
