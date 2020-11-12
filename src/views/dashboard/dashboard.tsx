@@ -394,7 +394,7 @@ function Dashboard() {
             <h4 className="name-title">Front - End Developer</h4>
           </Col>
           <Col xs={12} className="description-item">
-            <p className="name-title">
+            <p className="description-text">
               Soy desarrollador de software especializado en la parte Front -
               End, desarrollo de páginas web y aplicaciones móviles. Me
               apasionan la nuevas tecnologías así como el trabajo en equipo y

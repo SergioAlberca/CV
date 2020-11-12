@@ -149,3 +149,8 @@
   text-decoration: underline;
   font-size: 25px;
 }
+
+.description-text {
+  color: white;
+  text-align: justify;
+}
