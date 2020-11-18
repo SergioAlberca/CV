@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+import ".//styles/App.scss";
 import Dashboard from "./views/dashboard/dashboard";
 import "bootstrap/dist/css/bootstrap.min.css";
 

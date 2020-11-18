@@ -62,6 +62,7 @@
 .personal-data {
   background-color: #008fa0;
   padding: 10px;
+  text-align: center;
 }
 
 .personal-data-container {
@@ -153,4 +154,21 @@
 .description-text {
   color: white;
   text-align: justify;
+}
+
+.loading-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading {
+  text-align: center;
+}
+
+.loading-element {
+  width: 130px;
 }
