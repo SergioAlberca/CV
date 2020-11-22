@@ -27,7 +27,7 @@ function Sections(props: any) {
               eventKey={sections.skills}
               title="Conocimientos Técnicos"
             ></Tab>
-            <Tab eventKey={sections.contact} title="Contacto"></Tab>
+            {/* <Tab eventKey={sections.contact} title="Contacto"></Tab> */}
           </Tabs>
         </Col>
       </Row>
