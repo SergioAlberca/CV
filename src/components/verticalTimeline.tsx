@@ -8,9 +8,9 @@ import {
 
 function Vercticaltimeline(props: any) {
   const formatDate = (since: number, until: any) => {
-    const d = new Date(since).toLocaleDateString();
+    const d = new Date(since).toDateString();
     const e =
-      typeof until !== "string" ? new Date(until).toLocaleDateString() : until;
+      typeof until !== "string" ? new Date(until).toDateString() : until;
     return d + " - " + e;
   };
 
@@ -29,10 +29,7 @@ function Vercticaltimeline(props: any) {
                 contentArrowStyle={{
                   borderRight: "7px solid #007888",
                 }}
-                date={formatDate(
-                  item.since.seconds,
-                  item.until.seconds ? item.until.seconds : item.until
-                )}
+                // date={item.since}
                 iconStyle={{
                   background: "#007888",
                   color: "#fff",
@@ -47,6 +44,7 @@ function Vercticaltimeline(props: any) {
                   {item.company}, {item.city}
                 </h4>
                 <p>{item.descriptionEmployment}</p>
+                <p>{item.since + ' - ' + item.until}</p>
               </VerticalTimelineElement>
             );
           })}
