@@ -1,5 +1,10 @@
 import { faTwitter, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faAt, faPhone, faMapMarker } from "@fortawesome/free-solid-svg-icons";
+import {
+  faAt,
+  faPhone,
+  faMapMarker,
+  faDownload,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Row, Col, Button } from "react-bootstrap";
@@ -34,6 +39,16 @@ function PersonalData(props: any) {
             href="https://firebasestorage.googleapis.com/v0/b/cv-sergio-alberca.appspot.com/o/CV-Sergio_Alberca-2020.pdf?alt=media&token=5e16e616-281a-48df-8898-10ae84d441dd"
           >
             Descarga mi CV aquí
+          </Button>
+          <Button
+            className="button-donwload-icon"
+            target="_blank"
+            href="https://firebasestorage.googleapis.com/v0/b/cv-sergio-alberca.appspot.com/o/CV-Sergio_Alberca-2020.pdf?alt=media&token=5e16e616-281a-48df-8898-10ae84d441dd"
+          >
+            <FontAwesomeIcon
+              icon={faDownload}
+              className="icon-social-sharing"
+            />
           </Button>
         </Col>
       </Row>
