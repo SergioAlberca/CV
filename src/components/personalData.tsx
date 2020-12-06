@@ -6,91 +6,113 @@ import {
   faDownload,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
-import { Row, Col, Button } from "react-bootstrap";
+import { Avatar, Box, Button, Grid } from "@material-ui/core";
+import React, { useEffect, useState } from "react";
+import { url_linkdn, url_twitter } from "../constants/constants";
+import { getCvFile, getImagePorfile } from "../services/firebase.service";
 
 function PersonalData(props: any) {
+  const [image, setImage] = useState("");
+
+  const getCv = () => {
+    getCvFile().then((url: string) => {
+      window.open(url, "_blank");
+    });
+  };
+
+  const getImage = () => {
+    getImagePorfile().then((url: string) => {
+      setImage(url);
+    });
+  };
+
+  useEffect(() => {
+    getImage();
+  }, []);
+
   return (
-    <div>
-      {/* Iconos de redes sociales y botón descargar */}
-      <Row className="header-social-sharing">
-        <Col xs={6} className="buttons-social-sharing">
+    <Box>
+      <Grid container className="header-social-sharing">
+        <Grid item xs={6} className="buttons-social-sharing">
           <Button
+            variant="contained"
+            color="secondary"
             className="button-social-sharing"
-            href="https://twitter.com/s_alberca?lang=es"
+            target="_blank"
+            href={url_twitter}
           >
-            {" "}
             <FontAwesomeIcon icon={faTwitter} className="icon-social-sharing" />
           </Button>
           <Button
+            variant="contained"
+            color="secondary"
             className="button-social-sharing"
-            href="https://es.linkedin.com/in/sergio-alberca-navarro-a44353106"
+            target="_blank"
+            href={url_linkdn}
           >
             <FontAwesomeIcon
               icon={faLinkedin}
               className="icon-social-sharing"
             />
           </Button>
-        </Col>
-        <Col xs={6} className="button-donwload-container">
+        </Grid>
+        <Grid item xs={6} className="button-donwload-container">
           <Button
             className="button-donwload"
-            target="_blank"
-            href="https://firebasestorage.googleapis.com/v0/b/cv-sergio-alberca.appspot.com/o/CV-Sergio_Alberca-2020.pdf?alt=media&token=5e16e616-281a-48df-8898-10ae84d441dd"
+            variant="contained"
+            color="secondary"
+            onClick={() => getCv()}
           >
             Descarga mi CV aquí
           </Button>
           <Button
             className="button-donwload-icon"
-            target="_blank"
-            href="https://firebasestorage.googleapis.com/v0/b/cv-sergio-alberca.appspot.com/o/CV-Sergio_Alberca-2020.pdf?alt=media&token=5e16e616-281a-48df-8898-10ae84d441dd"
+            variant="contained"
+            color="secondary"
+            onClick={() => getCv()}
           >
             <FontAwesomeIcon
               icon={faDownload}
               className="icon-social-sharing"
             />
           </Button>
-        </Col>
-      </Row>
+        </Grid>
+      </Grid>
       {/* Avatar y descripcion */}
-      <Row className="description">
-        <Col xs={12} className="description-item">
-          <img
-            className="avatar"
-            src="https://firebasestorage.googleapis.com/v0/b/cv-sergio-alberca.appspot.com/o/Profile%20(1).jpg?alt=media&token=b2547b31-08c6-4bb0-84a4-716ba44b9630"
-            alt=""
-          />
-        </Col>
-        <Col xs={12} className="description-item">
+      <Grid container className="description">
+        <Grid item xs={12} className="description-item">
+          <Avatar className="avatar" src={image} alt="" />
+        </Grid>
+        <Grid xs={12} className="description-item">
           <h1 className="name-title">
             {props.personalData.name} {props.personalData.surname}{" "}
             {props.personalData.surname2}
           </h1>
-        </Col>
-        <Col xs={12} className="description-item">
+        </Grid>
+        <Grid item xs={12} className="description-item">
           <h4 className="name-title">{props.personalData.employment}</h4>
-        </Col>
-        <Col xs={12} className="description-item">
+        </Grid>
+        <Grid item xs={12} className="description-item">
           <p className="description-text">{props.personalData.description}</p>
-        </Col>
-      </Row>
+        </Grid>
+      </Grid>
       {/* Datos personales */}
-      <Row className="personal-data">
-        <Col xs={12} md={4} className="personal-data-container">
+      <Grid container className="personal-data">
+        <Grid item xs={12} md={4} className="personal-data-container">
           <div className="personal-data-item">
             <FontAwesomeIcon icon={faAt} className="icon-social-sharing" />
             <h5 className="name-data">{props.personalData.email}</h5>
           </div>
-        </Col>
-        <Col xs={12} md={4} className="personal-data-container">
+        </Grid>
+        <Grid item xs={12} md={4} className="personal-data-container">
           <div className="personal-data-item">
             <FontAwesomeIcon icon={faPhone} className="icon-social-sharing" />
             <h5 className="name-data">
               {props.personalData.prefix} {props.personalData.phone}
             </h5>
           </div>
-        </Col>
-        <Col xs={12} md={4} className="personal-data-container">
+        </Grid>
+        <Grid item xs={12} md={4} className="personal-data-container">
           <div className="personal-data-item">
             <FontAwesomeIcon
               icon={faMapMarker}
@@ -101,9 +123,9 @@ function PersonalData(props: any) {
               {props.personalData.country}
             </h5>
           </div>
-        </Col>
-      </Row>
-    </div>
+        </Grid>
+      </Grid>
+    </Box>
   );
 }
 

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "./dashboard.scss";
-import { Container } from "react-bootstrap";
 import "react-vertical-timeline-component/style.min.css";
 import { getData } from "../../services/firebase.service";
 import CardSkills from "../../components/cardSkills";
@@ -10,6 +9,8 @@ import Loading from "../../components/loading";
 import Sections from "../../components/sections";
 import Vercticaltimeline from "../../components/verticalTimeline";
 import { sections } from "../../constants/constants";
+import Typography from "@material-ui/core/Typography/Typography";
+import { Box, Container } from "@material-ui/core";
 
 interface data {
   experience: Array<any>;
@@ -50,7 +51,6 @@ function Dashboard() {
               break;
           }
         });
-        console.log("datos formateados", aux);
         setMainData(aux);
         setLoading(false);
       });
@@ -102,10 +102,11 @@ function Dashboard() {
   return (
     <div>
       {!loading && (
-        <Container className="container">
-          {renderPersonalData()}
-          {renderTabsSections()}
-        </Container>
+        <div className="container-custom">
+          <Box>
+            {renderPersonalData()} {renderTabsSections()}
+          </Box>
+        </div>
       )}
       {loading && <Loading></Loading>}
     </div>

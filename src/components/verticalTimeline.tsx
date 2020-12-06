@@ -7,13 +7,6 @@ import {
 } from "react-vertical-timeline-component";
 
 function Vercticaltimeline(props: any) {
-  const formatDate = (since: number, until: any) => {
-    const d = new Date(since).toDateString();
-    const e =
-      typeof until !== "string" ? new Date(until).toDateString() : until;
-    return d + " - " + e;
-  };
-
   return (
     <div>
       {props.experience && (
@@ -23,15 +16,15 @@ function Vercticaltimeline(props: any) {
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
                 contentStyle={{
-                  background: "#007888",
+                  background: "#f50057",
                   color: "white",
                 }}
                 contentArrowStyle={{
-                  borderRight: "7px solid #007888",
+                  borderRight: "7px solid #f50057",
                 }}
                 // date={item.since}
                 iconStyle={{
-                  background: "#007888",
+                  background: "#f50057",
                   color: "#fff",
                   fontSize: "19px",
                 }}
@@ -44,7 +37,7 @@ function Vercticaltimeline(props: any) {
                   {item.company}, {item.city}
                 </h4>
                 <p>{item.descriptionEmployment}</p>
-                <p>{item.since + ' - ' + item.until}</p>
+                <p>{item.since + " - " + item.until}</p>
               </VerticalTimelineElement>
             );
           })}
@@ -57,27 +50,30 @@ function Vercticaltimeline(props: any) {
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
                 contentStyle={{
-                  background: "#007888",
+                  background: "#f50057",
                   color: "white",
-                  padding: '10px'
+                  padding: "10px",
                 }}
                 contentArrowStyle={{
-                  borderRight: "7px solid #007888",
+                  borderRight: "7px solid #f50057",
                 }}
-                date={item.category}
+                //date={item.category}
                 iconStyle={{
-                  background: "#007888",
+                  background: "#f50057",
                   color: "#fff",
                   fontSize: "19px",
                 }}
                 icon={<FontAwesomeIcon icon={faLaptopCode} />}
               >
-                <h3 className="vertical-timeline-element-title">
+                <h3
+                  className="vertical-timeline-element-title"
+                >
                   {item.title}
                 </h3>
                 <p className="vertical-timeline-element-subtitle">
                   {item.institute}
                 </p>
+                <p>{item.category}</p>
               </VerticalTimelineElement>
             );
           })}

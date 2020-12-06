@@ -1,5 +1,6 @@
+import { Container } from "@material-ui/core";
 import React from "react";
-import { Container } from "react-bootstrap";
+// import { Container } from "react-bootstrap";
 import loadingGif from "../assets/images/loading.gif";
 
 function Loading() {
