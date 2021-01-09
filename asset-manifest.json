@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/CV/static/css/main.6449e217.chunk.css",
-    "main.js": "/CV/static/js/main.ce804ec3.chunk.js",
-    "main.js.map": "/CV/static/js/main.ce804ec3.chunk.js.map",
-    "runtime-main.js": "/CV/static/js/runtime-main.f62ab495.js",
-    "runtime-main.js.map": "/CV/static/js/runtime-main.f62ab495.js.map",
+    "main.css": "/CV/static/css/main.b10b1662.chunk.css",
+    "main.js": "/CV/static/js/main.0a0e1508.chunk.js",
+    "main.js.map": "/CV/static/js/main.0a0e1508.chunk.js.map",
+    "runtime-main.js": "/CV/static/js/runtime-main.b5ec60b6.js",
+    "runtime-main.js.map": "/CV/static/js/runtime-main.b5ec60b6.js.map",
     "static/css/2.2aa38b9c.chunk.css": "/CV/static/css/2.2aa38b9c.chunk.css",
-    "static/js/2.24560c0b.chunk.js": "/CV/static/js/2.24560c0b.chunk.js",
-    "static/js/2.24560c0b.chunk.js.map": "/CV/static/js/2.24560c0b.chunk.js.map",
-    "static/js/3.a474beff.chunk.js": "/CV/static/js/3.a474beff.chunk.js",
-    "static/js/3.a474beff.chunk.js.map": "/CV/static/js/3.a474beff.chunk.js.map",
+    "static/js/2.19b7d6c5.chunk.js": "/CV/static/js/2.19b7d6c5.chunk.js",
+    "static/js/2.19b7d6c5.chunk.js.map": "/CV/static/js/2.19b7d6c5.chunk.js.map",
+    "static/js/3.f648aac2.chunk.js": "/CV/static/js/3.f648aac2.chunk.js",
+    "static/js/3.f648aac2.chunk.js.map": "/CV/static/js/3.f648aac2.chunk.js.map",
     "index.html": "/CV/index.html",
     "static/css/2.2aa38b9c.chunk.css.map": "/CV/static/css/2.2aa38b9c.chunk.css.map",
-    "static/css/main.6449e217.chunk.css.map": "/CV/static/css/main.6449e217.chunk.css.map",
-    "static/js/2.24560c0b.chunk.js.LICENSE.txt": "/CV/static/js/2.24560c0b.chunk.js.LICENSE.txt",
-    "static/media/loading.a4aa390c.gif": "/CV/static/media/loading.a4aa390c.gif"
+    "static/css/main.b10b1662.chunk.css.map": "/CV/static/css/main.b10b1662.chunk.css.map",
+    "static/js/2.19b7d6c5.chunk.js.LICENSE.txt": "/CV/static/js/2.19b7d6c5.chunk.js.LICENSE.txt",
+    "static/media/main.css": "/CV/static/media/poppins-semibold-webfont.efc1e4ee.eot"
   },
   "entrypoints": [
-    "static/js/runtime-main.f62ab495.js",
+    "static/js/runtime-main.b5ec60b6.js",
     "static/css/2.2aa38b9c.chunk.css",
-    "static/js/2.24560c0b.chunk.js",
-    "static/css/main.6449e217.chunk.css",
-    "static/js/main.ce804ec3.chunk.js"
+    "static/js/2.19b7d6c5.chunk.js",
+    "static/css/main.b10b1662.chunk.css",
+    "static/js/main.0a0e1508.chunk.js"
   ]
 }
