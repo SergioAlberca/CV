@@ -11,29 +11,53 @@ export function getData(): Promise<any> {
   });
 }
 
-export function getCvFile(): Promise<any> {
+export function getCvFile(url: string): Promise<any> {
   return new Promise((resolve, reject) => {
     storage
-      .ref("sergio-alberca-cv.pdf")
+      .ref(url)
       .getDownloadURL()
       .then((url) => {
         resolve(url);
-      }).catch(err => {
-        console.log(err)
+      })
+      .catch((err) => {
+        reject(err);
       });
   });
 }
 
-export function getImagePorfile(): Promise<any> {
+export function getImagePorfile(url: string): Promise<any> {
   return new Promise((resolve, reject) => {
     storage
-      .ref("Profile (1).jpg")
+      .ref(url)
       .getDownloadURL()
       .then((url) => {
         resolve(url);
-      }).catch(err => {
-        console.log(err)
+      })
+      .catch((err) => {
+        reject(err);
       });
   });
 }
 
+export function setNotification(data: any): Promise<any> {
+  return new Promise((resolve, reject) => {
+    firestore
+      .collection("data")
+      .doc("notifications")
+      .update({
+        notifications: firebase.firestore.FieldValue.arrayUnion({
+          message: data.message,
+          subject: data.subject,
+          nameSender: data.nameSender,
+          emailSender: data.emailSender,
+          date: data.date,
+        }),
+      })
+      .then((res) => {
+        resolve(res);
+      })
+      .catch((err) => {
+        reject(err);
+      });
+  });
+}
