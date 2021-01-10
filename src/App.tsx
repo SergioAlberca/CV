@@ -1,13 +1,13 @@
 import React from "react";
-import "./styles/App.scss";
-import Dashboard from "./views/dashboard/dashboard";
+/* Css */
+import "./assets/css/base.css";
+import "./assets/css/main.css";
+import "./assets/css/vendor.css";
+/* Layouts */
+import Dashboard from "./layouts/dashboard/dashboard";
 
 function App() {
-  return (
-    <div>
-      <Dashboard />
-    </div>
-  );
+  return <Dashboard />;
 }
 
 export default App;
